@@ -25,6 +25,42 @@ JSON file attached acts as a data source which can work with any programming lan
 - Run server
 
 
+## Using the JSON File
+
+This is located in the uganda-universities-domians.json file. It is just a list of dictionaries in the following format:
+```
+[
+	...
+	{
+		"domains": [
+			"must.ac.ug"
+			], 
+		"web_pages": [
+			"http://www.must.ac.ug/"
+			], 
+		"name": "Mbarara University of Science and Technology",
+		"abbrev": "MUST",
+		"location": "Mbarara", 
+		"alpha_two_code": "UG",
+		"alpha_three_code": "UGA",  
+		"country": "Uganda"
+	}, 
+	...
+]
+```
+## Filter through the Universities
+
+If you want a particular university, run
+
+```bash
+filters.py $name1 [Optional: $name2]
+```
+
+from the root directory to return
+
+```
+filtered-uganda-universities-domains.json
+```
 ## Contributing
 Pull requests are welcome. Do not hesitate to fix any wrong data. But please open an issue first to discuss what you would like to change.
 
