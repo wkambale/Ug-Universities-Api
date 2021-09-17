@@ -6,9 +6,9 @@
 [![Tweet](https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%2FWesleyKambale%2FUg-Universities-Api)](https://twitter.com)
 
 
-# Uganda University Domain List
+# Uganda Universities List
 
-Uganda University Domain List is a JSON API that contains domain names, university names of most of the universities in Uganda.
+Uganda Universities List shows Universities in Uganda. It uses [OpenStreetMaps](https://openstreetmap.org/) to show the different universities on a map of Uganda. It includes a JSON API that contains domain names, university names of most of the universities in Uganda.
 
 The list includes;
 - Private Universities
@@ -17,17 +17,15 @@ The list includes;
 
 JSON file attached acts as a data source which can work with any programming language.
 
+## Demo
 
-## Usage
-- Clone Project: git clone https://github.com/WesleyKambale/ug-universities-api.git
-- Setup and activate your virtual environment
-- Install requirements pip install -r requirements.txt
-- Run server
+![](/docs/screenshot.png)
 
+Here is the demo link: [http://ug-universities.herokuapp.com](http://ug-universities.herokuapp.com)
 
 ## Using the JSON File
 
-This is located in the uganda-universities-domians.json file. It is just a list of dictionaries in the following format:
+This is located in the uganda-universities-domains.json file. It is just a list of dictionaries in the following format:
 ```
 [
 	...
@@ -48,26 +46,18 @@ This is located in the uganda-universities-domians.json file. It is just a list 
 	...
 ]
 ```
-## Filter through the Universities
 
-If you want a particular university, run
-
-```bash
-filters.py $name1 [Optional: $name2]
-```
-
-from the root directory to return
-
-```
-filtered-uganda-universities-domains.json
-```
 ## Contributing
 Pull requests are welcome. Do not hesitate to fix any wrong data. But please open an issue first to discuss what you would like to change.
+
+- Check out [CONTRIBUTING.md](CONTRIBUTING.md) for information about getting involved.
 
 ## License
 [MIT License](https://github.com/WesleyKambale/Ug-Universities-Api/blob/main/LICENSE)
 
 ## Creation & Inspiration
-Created by [Wesley Kambale](https://kambale.dev)
+Created by [Wesley Kambale](https://kambale.hashnode.dev)
 
-Inspiration from [Hipo](https://github.com/Hipo/university-domains-list)
+Inspiration from;
+- [Hipo](https://github.com/Hipo/university-domains-list) for the JSON List
+- [Stuart Elimu](https://github.com/stuartelimu/vaccination-centres) for the Web App

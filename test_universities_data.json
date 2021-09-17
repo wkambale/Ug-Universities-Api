@@ -1,0 +1,142 @@
+[
+    {
+    "domains": ["niu.ac.ug"], 
+    "web_pages": ["http://www.niu.ac.ug/"], 
+    "uni_name": "Nexus International University",
+    "abbrev": "NIU",
+    "location": "Kampala", 
+    "alpha_two_code": "UG",  
+    "alpha_three_code": "UGA",
+    "country": "Uganda"
+},
+{
+    "domains": ["nkumbauniversity.ac.ug"], 
+    "web_pages": ["http://www.nkumbauniversity.ac.ug/"], 
+    "uni_name": "Nkumba University",
+    "abbrev": "NKU",
+    "location": "Nkumba", 
+    "alpha_two_code": "UG",  
+    "alpha_three_code": "UGA",
+    "country": "Uganda"
+},
+{
+    "domains": ["nsakauniversity.ac.ug"], 
+    "web_pages": ["http://www.nsakauniversity.ac.ug/"], 
+    "uni_name": "Nsaka University",
+    "abbrev": "NSU",
+    "location": "Jinja", 
+    "alpha_two_code": "UG",  
+    "alpha_three_code": "UGA",
+    "country": "Uganda"
+},
+{
+    "domains": ["sun.ac.ug"], 
+    "web_pages": ["http://www.sun.ac.ug/"], 
+    "uni_name": "Soroti University",
+    "abbrev": "SU",
+    "location": "Soroti", 
+    "alpha_two_code": "UG", 
+    "alpha_three_code": "UGA", 
+    "country": "Uganda"
+},
+{
+    "domains": ["slau.ac.ug"], 
+    "web_pages": ["http://www.slau.ac.ug/"], 
+    "uni_name": "St. Lawrence University",
+    "abbrev": "SLAU",
+    "location": "Mengo", 
+    "alpha_two_code": "UG",  
+    "alpha_three_code": "UGA",
+    "country": "Uganda"
+}, 
+{
+    "domains": ["suu.ac.ug"], 
+    "web_pages": ["http://www.suu.ac.ug/"], 
+    "uni_name": "Stafford University Uganda",
+    "abbrev": "SUU",
+    "location": "Kisugu", 
+    "alpha_two_code": "UG",  
+    "alpha_three_code": "UGA",
+    "country": "Uganda"
+},
+{
+    "domains": ["unik.ac.ug"], 
+    "web_pages": ["http://www.unik.ac.ug/"], 
+    "uni_name": "University of Kisubi",
+    "abbrev": "UNIK",
+    "location": "Kisubi", 
+    "alpha_two_code": "UG", 
+    "alpha_three_code": "UGA", 
+    "country": "Uganda"
+},
+{
+    "domains": ["ucu.ac.ug"], 
+    "web_pages": ["http://www.ucu.ac.ug/"], 
+    "uni_name": "Uganda Christian University",
+    "abbrev": "UCU",
+    "location": "Mukono", 
+    "alpha_two_code": "UG", 
+    "alpha_three_code": "UGA", 
+    "country": "Uganda"
+}, 
+{
+    "domains": ["umi.ac.ug"], 
+    "web_pages": ["http://www.umi.ac.ug/"], 
+    "uni_name": "Uganda Management Institute",
+    "abbrev": "UMI",
+    "location": "Kampala", 
+    "alpha_two_code": "UG",  
+    "alpha_three_code": "UGA",
+    "country": "Uganda"
+},
+{
+    "domains": ["umu.ac.ug"], 
+    "web_pages": ["http://www.umu.ac.ug/"], 
+    "uni_name": "Uganda Martyr's University",
+    "abbrev": "UMU",
+    "location": "Nkozi", 
+    "alpha_two_code": "UG",  
+    "alpha_three_code": "UGA",
+    "country": "Uganda"
+},
+{
+    "domains": ["upu.ac.ug"], 
+    "web_pages": ["http://www.upu.ac.ug/"], 
+    "uni_name": "Uganda Pentecostal University",
+    "abbrev": "UPU",
+    "location": "Fort Portal", 
+    "alpha_two_code": "UG", 
+    "alpha_three_code": "UGA", 
+    "country": "Uganda"
+},
+{
+    "domains": ["utamu.ac.ug"], 
+    "web_pages": ["http://www.utamu.ac.ug/"], 
+    "uni_name": "Uganda Technology and Management University",
+    "abbrev": "UTAMU",
+    "location": "Kampala", 
+    "alpha_two_code": "UG",  
+    "alpha_three_code": "UGA",
+    "country": "Uganda"
+},
+{
+    "domains": ["ush.ac.ug"], 
+    "web_pages": ["http://www.ush.ac.ug/"], 
+    "uni_name": "University of Sacred Heart Gulu",
+    "abbrev": "USHG",
+    "location": "Gulu", 
+    "alpha_two_code": "UG",  
+    "alpha_three_code": "UGA",
+    "country": "Uganda"
+},
+{
+    "domains": ["vu.ac.ug"], 
+    "web_pages": ["http://www.vu.ac.ug/"], 
+    "uni_name": "Victoria University Uganda",
+    "abbrev": "VU",
+    "location": "Kampala", 
+    "alpha_two_code": "UG",  
+    "alpha_three_code": "UGA",
+    "country": "Uganda"
+}
+]
