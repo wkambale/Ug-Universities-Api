@@ -3,6 +3,7 @@ dj-database-url==0.5.0
 Django==3.2.4
 gunicorn==20.1.0
 gdal==3.2.0
+geos==3.7.2
 psycopg2-binary==2.8.6
 python-decouple==3.4
 pytz==2021.1
