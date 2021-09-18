@@ -19,8 +19,6 @@ JSON file attached acts as a data source which can work with any programming lan
 
 ## Demo
 
-![](/docs/screenshot.png)
-
 Here is the demo link: [http://ug-universities.herokuapp.com](http://ug-universities.herokuapp.com)
 
 ## Using the JSON File
