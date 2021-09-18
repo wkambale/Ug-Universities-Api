@@ -1,142 +1,134 @@
 [
-    {
-    "domains": ["niu.ac.ug"], 
-    "web_pages": ["http://www.niu.ac.ug/"], 
-    "uni_name": "Nexus International University",
-    "abbrev": "NIU",
-    "location": "Kampala", 
-    "alpha_two_code": "UG",  
-    "alpha_three_code": "UGA",
-    "country": "Uganda"
-},
-{
-    "domains": ["nkumbauniversity.ac.ug"], 
-    "web_pages": ["http://www.nkumbauniversity.ac.ug/"], 
-    "uni_name": "Nkumba University",
-    "abbrev": "NKU",
-    "location": "Nkumba", 
-    "alpha_two_code": "UG",  
-    "alpha_three_code": "UGA",
-    "country": "Uganda"
-},
-{
-    "domains": ["nsakauniversity.ac.ug"], 
-    "web_pages": ["http://www.nsakauniversity.ac.ug/"], 
-    "uni_name": "Nsaka University",
-    "abbrev": "NSU",
-    "location": "Jinja", 
-    "alpha_two_code": "UG",  
-    "alpha_three_code": "UGA",
-    "country": "Uganda"
-},
-{
-    "domains": ["sun.ac.ug"], 
-    "web_pages": ["http://www.sun.ac.ug/"], 
-    "uni_name": "Soroti University",
-    "abbrev": "SU",
-    "location": "Soroti", 
-    "alpha_two_code": "UG", 
-    "alpha_three_code": "UGA", 
-    "country": "Uganda"
-},
-{
-    "domains": ["slau.ac.ug"], 
-    "web_pages": ["http://www.slau.ac.ug/"], 
-    "uni_name": "St. Lawrence University",
-    "abbrev": "SLAU",
-    "location": "Mengo", 
-    "alpha_two_code": "UG",  
-    "alpha_three_code": "UGA",
-    "country": "Uganda"
-}, 
-{
-    "domains": ["suu.ac.ug"], 
-    "web_pages": ["http://www.suu.ac.ug/"], 
-    "uni_name": "Stafford University Uganda",
-    "abbrev": "SUU",
-    "location": "Kisugu", 
-    "alpha_two_code": "UG",  
-    "alpha_three_code": "UGA",
-    "country": "Uganda"
-},
-{
-    "domains": ["unik.ac.ug"], 
-    "web_pages": ["http://www.unik.ac.ug/"], 
-    "uni_name": "University of Kisubi",
-    "abbrev": "UNIK",
-    "location": "Kisubi", 
-    "alpha_two_code": "UG", 
-    "alpha_three_code": "UGA", 
-    "country": "Uganda"
-},
-{
-    "domains": ["ucu.ac.ug"], 
-    "web_pages": ["http://www.ucu.ac.ug/"], 
-    "uni_name": "Uganda Christian University",
-    "abbrev": "UCU",
-    "location": "Mukono", 
-    "alpha_two_code": "UG", 
-    "alpha_three_code": "UGA", 
-    "country": "Uganda"
-}, 
-{
-    "domains": ["umi.ac.ug"], 
-    "web_pages": ["http://www.umi.ac.ug/"], 
-    "uni_name": "Uganda Management Institute",
-    "abbrev": "UMI",
-    "location": "Kampala", 
-    "alpha_two_code": "UG",  
-    "alpha_three_code": "UGA",
-    "country": "Uganda"
-},
-{
-    "domains": ["umu.ac.ug"], 
-    "web_pages": ["http://www.umu.ac.ug/"], 
-    "uni_name": "Uganda Martyr's University",
-    "abbrev": "UMU",
-    "location": "Nkozi", 
-    "alpha_two_code": "UG",  
-    "alpha_three_code": "UGA",
-    "country": "Uganda"
-},
-{
-    "domains": ["upu.ac.ug"], 
-    "web_pages": ["http://www.upu.ac.ug/"], 
-    "uni_name": "Uganda Pentecostal University",
-    "abbrev": "UPU",
-    "location": "Fort Portal", 
-    "alpha_two_code": "UG", 
-    "alpha_three_code": "UGA", 
-    "country": "Uganda"
-},
-{
-    "domains": ["utamu.ac.ug"], 
-    "web_pages": ["http://www.utamu.ac.ug/"], 
-    "uni_name": "Uganda Technology and Management University",
-    "abbrev": "UTAMU",
-    "location": "Kampala", 
-    "alpha_two_code": "UG",  
-    "alpha_three_code": "UGA",
-    "country": "Uganda"
-},
-{
-    "domains": ["ush.ac.ug"], 
-    "web_pages": ["http://www.ush.ac.ug/"], 
-    "uni_name": "University of Sacred Heart Gulu",
-    "abbrev": "USHG",
-    "location": "Gulu", 
-    "alpha_two_code": "UG",  
-    "alpha_three_code": "UGA",
-    "country": "Uganda"
-},
-{
-    "domains": ["vu.ac.ug"], 
-    "web_pages": ["http://www.vu.ac.ug/"], 
-    "uni_name": "Victoria University Uganda",
-    "abbrev": "VU",
-    "location": "Kampala", 
-    "alpha_two_code": "UG",  
-    "alpha_three_code": "UGA",
-    "country": "Uganda"
-}
+	{
+		"domains": ["aku.edu"], 
+		"web_pages": ["http://www.aku.edu/"], 
+		"uni_name": "Aga Khan University",
+		"abbrev": "AKU",
+		"main_loc": "Kampala",
+		"lat": "0.32101",
+        "lon": "32.56872",
+		"alpha_two_code": "UG", 
+		"alpha_three_code": "UGA", 
+		"country": "Uganda"
+	},
+	{
+		"domains": ["afru.ac.ug"], 
+		"web_pages": ["http://www.afru.ac.ug/"], 
+		"uni_name": "Africa Renewal University",
+		"abbrev": "AfRU",
+		"main_loc": "Buloba",
+		"lat": "0.32620",
+        "lon": "32.44042",
+		"alpha_two_code": "UG",
+		"alpha_three_code": "UGA",  
+		"country": "Uganda"
+	},
+	{
+		"domains": ["aru.ac.ug"], 
+		"web_pages": ["http://www.aru.ac.ug/"], 
+		"uni_name": "African Rural University for Women",
+		"abbrev": "ARU",
+		"main_loc": "Kagadi",
+		"lat": "0.94211",
+        "lon": "30.81928",
+		"alpha_two_code": "UG", 
+		"alpha_three_code": "UGA", 
+		"country": "Uganda"
+	},
+	{
+		"domains": ["asul.ac.ug"], 
+		"web_pages": ["http://www.asul.ac.ug/"], 
+		"uni_name": "All Saints University",
+		"abbrev": "ASU",
+		"main_loc": "Lira",
+		"lat": "0.34555",
+        "lon": "32.56093",
+		"alpha_two_code": "UG",  
+		"alpha_three_code": "UGA",
+		"country": "Uganda"
+	},
+	{
+		"domains": ["awu.ac.ug"], 
+		"web_pages": ["http://www.awu.ac.ug/"], 
+		"uni_name": "Ankole Western University",
+		"abbrev": "AWU",
+		"main_loc": "Kabwohe", 
+		"lat": "-0.57365",
+        "lon": "30.38135",
+		"alpha_two_code": "UG", 
+		"alpha_three_code": "UGA", 
+		"country": "Uganda"
+	},
+	{
+		"domains": ["bsu.ac.ug"], 
+		"web_pages": ["http://www.bsu.ac.ug/"], 
+		"uni_name": "Bishop Stuart University",
+		"abbrev": "BSU",
+		"main_loc": "Mbarara",
+		"lat": "-0.60703",
+        "lon": "30.66186",
+		"alpha_two_code": "UG",
+		"alpha_three_code": "UGA",  
+		"country": "Uganda"
+	},
+	{
+		"domains": ["bugemauniv.ac.ug"], 
+		"web_pages": ["http://www.bugemauniv.ac.ug/"], 
+		"uni_name": "Bugema University",
+		"abbrev": "BMU",
+		"main_loc": "Bugema",
+		"lat": "0.57050",
+        "lon": "32.64374",
+		"alpha_two_code": "UG",  
+		"alpha_three_code": "UGA",
+		"country": "Uganda"
+	}, 
+	{
+		"domains": ["busitema.ac.ug"], 
+		"web_pages": ["http://www.busitema.ac.ug/"], 
+		"uni_name": "Busitema University",
+		"abbrev": null,
+		"main_loc": "Busitema",
+		"lat": "0.54551",
+        "lon": "34.02007",
+		"alpha_two_code": "UG", 
+		"alpha_three_code": "UGA", 
+		"country": "Uganda"
+	}, 
+	{
+		"domains": ["busogauniversity.ac.ug"], 
+		"web_pages": ["http://www.busogauniversity.ac.ug/"], 
+		"uni_name": "Busoga University",
+		"abbrev": "BGU",
+		"main_loc": "Iganga",
+		"lat": "0.59185",
+        "lon": "33.45914",
+		"alpha_two_code": "UG",
+		"alpha_three_code": "UGA",  
+		"country": "Uganda"
+	}, 
+	{
+		"domains": ["cavendish.ac.ug"], 
+		"web_pages": ["http://www.cavendish.ac.ug/"], 
+		"uni_name": "Cavendish University Uganda",
+		"abbrev": "CUU",
+		"main_loc": "Kampala",
+		"lat": "0.30115",
+        "lon": "32.59344",
+		"alpha_two_code": "UG", 
+		"alpha_three_code": "UGA", 
+		"country": "Uganda"
+	},
+	{
+		"domains": ["cbu2000.com"], 
+		"web_pages": ["http://www.cbu2000.com/"], 
+		"uni_name": "Central Buganda University",
+		"abbrev": null,
+		"main_loc": "Kampala",
+		"lat": "0.18609",
+        "lon": "31.89957",
+		"alpha_two_code": "UG", 
+		"alpha_three_code": "UGA", 
+		"country": "Uganda"
+	}
 ]
