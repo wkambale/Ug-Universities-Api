@@ -4,10 +4,6 @@ Thank you for your help in improving this project.
 
 All contributors are welcome. This project is community-built and welcomes collaboration. Contributors are expected to adhere to our [Code of Conduct (In Progress)](#).
 
-All set to contribute? Grab an open issue with the [help wanted](https://github.com/stuartelimu/vaccination-centres/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22) or [good first issue](https://github.com/stuartelimu/vaccination-centres/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) label and jump in.
-
-Create a [new issue](https://github.com/stuartelimu/vaccination-centres/issues/new) if needed. All [pull requests](https://github.com/stuartelimu/vaccination-centres/pulls) should ideally reference an open [issue](https://github.com/stuartelimu/vaccination-centres/issues?q=is%3Aopen+is%3Aissue). Include keywords in your pull request descriptions, as well as commit messages, to [automatically close related issues in GitHub](https://help.github.com/en/github/managing-your-work-on-github/closing-issues-using-keywords).
-
 **Sections**
 
 - <a href="#contribution">General Contribution Flow</a>
