@@ -118,17 +118,5 @@
 		"alpha_two_code": "UG", 
 		"alpha_three_code": "UGA", 
 		"country": "Uganda"
-	},
-	{
-		"domains": ["cbu2000.com"], 
-		"web_pages": ["http://www.cbu2000.com/"], 
-		"uni_name": "Central Buganda University",
-		"abbrev": null,
-		"main_loc": "Kampala",
-		"lat": "0.18609",
-        "lon": "31.89957",
-		"alpha_two_code": "UG", 
-		"alpha_three_code": "UGA", 
-		"country": "Uganda"
 	}
 ]
