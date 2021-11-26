@@ -55,7 +55,3 @@ Pull requests are welcome. Do not hesitate to fix any wrong data. But please ope
 
 ## Creation & Inspiration
 Created by [Wesley Kambale](https://kambale.hashnode.dev)
-
-Inspiration from;
-- [Hipo](https://github.com/Hipo/university-domains-list) for the JSON List
-- [Stuart Elimu](https://github.com/stuartelimu/vaccination-centres) for the Web App
