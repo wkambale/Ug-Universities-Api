@@ -258,3 +258,5 @@ Submit your changes for review, If you go to your repository on GitHub, you'll s
 Add a brief description and submit the pull request.
 
 Soon we'll be merging all your changes into the master branch of this project. You will get push notification on github and a notification email once the changes have been merged.
+
+Thank you.
