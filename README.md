@@ -6,9 +6,9 @@
 [![Tweet](https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%2FWesleyKambale%2FUg-Universities-Api)](https://twitter.com/home/status?)
 
 
-# Uganda Universities List
+# Uganda Universities API
 
-Uganda Universities List shows Universities in Uganda. It uses [OpenStreetMaps](https://openstreetmap.org/) to show the different universities on a map of Uganda. It includes a JSON API that contains domain names, university names of most of the universities in Uganda.
+Uganda Universities API shows Universities in Uganda. It uses [OpenStreetMaps](https://openstreetmap.org/) to show the different universities on a map of Uganda. It includes a JSON API that contains domain names, university names of most of the universities in Uganda.
 
 The list includes;
 - Private Universities
