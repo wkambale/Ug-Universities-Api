@@ -53,5 +53,5 @@ Pull requests are welcome. Do not hesitate to fix any wrong data. But please ope
 ## License
 [MIT License](https://github.com/WesleyKambale/Ug-Universities-Api/blob/main/LICENSE)
 
-## Creation & Inspiration
+## Creation
 Created by [Wesley Kambale](https://kambale.hashnode.dev)
