@@ -82,7 +82,7 @@ if os.environ.get('GITHUB_WORKFLOW'):
             'NAME': 'github_actions',
             'USER': 'postgres',
             'PASSWORD': 'postgres',
-            'HOST': '127.0.0.1',
+            'HOST': 'ug-universities.herokuapp.com',
             'PORT': 5432
         }
     }
