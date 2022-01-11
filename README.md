@@ -3,7 +3,7 @@
 [![GitHub watchers](https://img.shields.io/github/watchers/WesleyKambale/Ug-Universities-Api)](https://github.com/WesleyKambale/Ug-Universities-Api/watchers)
 [![GitHub forks](https://img.shields.io/github/forks/WesleyKambale/Ug-Universities-Api)](https://github.com/WesleyKambale/Ug-Universities-Api/network/)
 [![GitHub stars](https://img.shields.io/github/stars/WesleyKambale/Ug-Universities-Api)](https://github.com/WesleyKambale/Ug-Universities-Api/stargazers)
-[![Tweet](https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%2FWesleyKambale%2FUg-Universities-Api)](https://twitter.com)
+[![Tweet](https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%2FWesleyKambale%2FUg-Universities-Api)](https://twitter.com/home/status?)
 
 
 # Uganda Universities List
