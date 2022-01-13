@@ -4,7 +4,7 @@ from django.db import models
 
 class University(models.Model):
     '''A Univesity with a name and location'''
-    uni_name = models.CharField(max_length=255)
+    uni_name = models.CharField(max_length=200)
     location = PointField()
 
 
