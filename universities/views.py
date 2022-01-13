@@ -1,6 +1,4 @@
 import json
-from django.core import serializers
-
 from django.core.serializers import serialize
 from django.views.generic.base import TemplateView
 from django.contrib.gis.geos import Polygon
