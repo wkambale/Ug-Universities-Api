@@ -1,9 +1,11 @@
 from typing import List, Optional
-from fastapi import APIRouter, Depends, HTTPException, Query, status
-from sqlalchemy.ext.asyncio import AsyncSession
 import csv
 import io
+import logging
+
+from fastapi import APIRouter, Depends, HTTPException, Query, status
 from fastapi.responses import StreamingResponse
+from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.database import get_db
 from app.universities.repository import UniversityRepository
@@ -13,6 +15,8 @@ from app.universities.schemas import (
 from app.universities.filters import UniversityFilters
 from app.core.responses import success_response, error_response
 from app.dependencies import require_admin
+
+logger = logging.getLogger("uvicorn.error")
 
 router = APIRouter()
 
@@ -134,7 +138,8 @@ async def create_university(data: UniversityCreate, db: AsyncSession = Depends(g
         university = await repo.create(data)
         return success_response(UniversityOut.model_validate(university), status_code=status.HTTP_201_CREATED)
     except Exception as e:
-         return error_response(message=f"Could not create university: {str(e)}", code=400)
+        logger.exception("Failed to create university: %s", data.name)
+        return error_response(message="Could not create university. It may already exist.", code=400)
 
 @router.put("/{id}", dependencies=[Depends(require_admin)], response_model=None, summary="Full update university", tags=["Universities"])
 async def update_university_full(id: int, data: UniversityUpdate, db: AsyncSession = Depends(get_db)):

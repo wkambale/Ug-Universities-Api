@@ -1,4 +1,5 @@
 from pydantic_settings import BaseSettings
+from pydantic import ConfigDict
 
 class Settings(BaseSettings):
     DATABASE_URL: str
@@ -6,7 +7,6 @@ class Settings(BaseSettings):
     SECRET_KEY:   str
     ENVIRONMENT:  str = "production"
 
-    class Config:
-        env_file = ".env"   # only used in local dev
+    model_config = ConfigDict(env_file=".env")  # only used in local dev
 
 settings = Settings()
