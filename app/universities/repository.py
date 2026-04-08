@@ -92,13 +92,13 @@ class UniversityRepository:
             select(University).filter(
                 University.latitude.isnot(None),
                 University.longitude.isnot(None),
-                University.is_active == True
+                University.is_active.is_(True)
             )
         )
         return list(result.scalars().all())
 
     async def get_domains(self) -> List[str]:
-        result = await self.db.execute(select(University.domains).filter(University.is_active == True))
+        result = await self.db.execute(select(University.domains).filter(University.is_active.is_(True)))
         domains = []
         for row in result.all():
             if row[0]:
@@ -108,7 +108,7 @@ class UniversityRepository:
     async def get_locations(self) -> List[str]:
         result = await self.db.execute(
             select(University.location)
-            .filter(University.is_active == True)
+            .filter(University.is_active.is_(True))
             .distinct()
         )
         return sorted([row[0] for row in result.all()])
@@ -116,7 +116,7 @@ class UniversityRepository:
     async def get_count_by_type(self) -> dict:
         result = await self.db.execute(
             select(University.type, func.count())
-            .filter(University.is_active == True)
+            .filter(University.is_active.is_(True))
             .group_by(University.type)
         )
         return {row[0]: row[1] for row in result.all()}

@@ -1,57 +1,163 @@
 [![GitHub license](https://img.shields.io/github/license/WesleyKambale/Ug-Universities-Api)](https://github.com/WesleyKambale/Ug-Universities-Api/blob/main/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/WesleyKambale/Ug-Universities-Api)](https://github.com/WesleyKambale/Ug-Universities-Api/issues)
-[![GitHub watchers](https://img.shields.io/github/watchers/WesleyKambale/Ug-Universities-Api)](https://github.com/WesleyKambale/Ug-Universities-Api/watchers)
-[![GitHub forks](https://img.shields.io/github/forks/WesleyKambale/Ug-Universities-Api)](https://github.com/WesleyKambale/Ug-Universities-Api/network/)
 [![GitHub stars](https://img.shields.io/github/stars/WesleyKambale/Ug-Universities-Api)](https://github.com/WesleyKambale/Ug-Universities-Api/stargazers)
-[![Tweet](https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%2FWesleyKambale%2FUg-Universities-Api)](https://twitter.com/home/status?)
-
+[![Tests](https://github.com/wkambale/Ug-Universities-Api/actions/workflows/test.yml/badge.svg)](https://github.com/wkambale/Ug-Universities-Api/actions/workflows/test.yml)
 
 # Uganda Universities API
 
-Uganda Universities API shows Universities in Uganda. It uses [OpenStreetMaps](https://openstreetmap.org/) to show the different universities on a map of Uganda. It includes a JSON API that contains domain names, university names of most of the universities in Uganda.
+A REST API listing universities in Uganda with geographic, domain, and classification data. Built with **FastAPI**, backed by **PostgreSQL** (Cloud SQL), containerized with **Docker**, and deployed to **Google Cloud Run**.
 
-The list includes;
-- Private Universities
-- Public Universities
-- Ugandan Military Universities
+## Features
 
-JSON file attached acts as a data source which can work with any programming language.
+- 🏫 **47 universities** — public and private institutions across Uganda
+- 🌍 **Geo data** — latitude/longitude coordinates for map rendering
+- 🔍 **Search & filter** — by name, location, type, with full-text search
+- 📄 **Pagination** — configurable page size, ordering, and cursor links
+- 📊 **Stats** — aggregate counts by type and location
+- 📥 **Export** — download full dataset as JSON or CSV
+- 🔒 **Admin routes** — bearer token-protected write endpoints
+- 📘 **OpenAPI docs** — auto-generated Swagger UI and ReDoc
 
-## Demo
+## Tech Stack
 
-Here is the demo link: [http://ug-universities.herokuapp.com](http://ug-universities.herokuapp.com)
+| Layer | Technology |
+|---|---|
+| Framework | FastAPI 0.111+ (async) |
+| ORM | SQLAlchemy 2.0 (async) + Alembic |
+| Database | PostgreSQL 15 (Cloud SQL) |
+| Schemas | Pydantic v2 |
+| Container | Docker (Python 3.12-slim) |
+| Deployment | Google Cloud Run (`africa-south1`) |
+| CI/CD | GitHub Actions |
 
-## Using the JSON File
+## API Endpoints
 
-This is located in the uganda-universities-domains.json file. It is just a list of dictionaries in the following format:
+### Public (read)
+
+| Method | Route | Description |
+|---|---|---|
+| `GET` | `/api/v1/universities/` | List all (paginated, filterable) |
+| `GET` | `/api/v1/universities/{id}` | Single university by ID |
+| `GET` | `/api/v1/universities/geo` | Coordinates for map rendering |
+| `GET` | `/api/v1/universities/domains` | All registered domains |
+| `GET` | `/api/v1/universities/locations` | Distinct locations |
+| `GET` | `/api/v1/universities/types` | Valid type values |
+| `GET` | `/api/v1/universities/count` | Count by type |
+| `GET` | `/api/v1/universities/export/json` | Full dataset as JSON |
+| `GET` | `/api/v1/universities/export/csv` | Full dataset as CSV |
+| `GET` | `/api/v1/stats/` | Aggregate statistics |
+| `GET` | `/health` | Liveness check |
+| `GET` | `/ready` | Readiness check (DB) |
+
+### Admin (bearer token required)
+
+| Method | Route | Description |
+|---|---|---|
+| `POST` | `/api/v1/universities/` | Create university |
+| `PUT` | `/api/v1/universities/{id}` | Full update |
+| `PATCH` | `/api/v1/universities/{id}` | Partial update |
+| `DELETE` | `/api/v1/universities/{id}` | Soft-delete |
+
+### Query Parameters
+
 ```
-[
-	...
-	{
-		"domains": [
-			"must.ac.ug"
-			], 
-		"web_pages": [
-			"http://www.must.ac.ug/"
-			], 
-		"name": "Mbarara University of Science and Technology",
-		"abbrev": "MUST",
-		"location": "Mbarara", 
-		"alpha_two_code": "UG",
-		"alpha_three_code": "UGA",  
-		"country": "Uganda"
-	}, 
-	...
-]
+?type=public           Filter by type (public, private, military)
+?location=Kampala      Filter by location (partial match)
+?search=makerere       Search name, abbrev, location
+?is_active=true        Show active (default) or inactive
+?ordering=-established Sort field (prefix - for descending)
+?page=2&page_size=50   Pagination (default 20, max 100)
+```
+
+## Local Development
+
+### Prerequisites
+
+- Python 3.12+
+- PostgreSQL 15+ (or use SQLite for quick testing)
+
+### Setup
+
+```bash
+# Clone and enter the project
+git clone https://github.com/wkambale/Ug-Universities-Api.git
+cd Ug-Universities-Api
+
+# Create virtual environment
+python -m venv .venv
+source .venv/bin/activate
+
+# Install dependencies
+pip install -r requirements-dev.txt
+
+# Create .env from template
+cp .env.example .env
+# Edit .env with your local database credentials
+
+# Run the API
+uvicorn app.main:app --reload
+```
+
+The API will be available at `http://localhost:8000`. Visit `/docs` for interactive Swagger UI.
+
+### Run Tests
+
+```bash
+pytest tests/ -v
+```
+
+Tests use an in-memory SQLite database — no PostgreSQL required.
+
+### Lint
+
+```bash
+ruff check app/
+```
+
+### Docker
+
+```bash
+docker build -t ug-universities-api .
+docker run -p 8080:8080 --env-file .env ug-universities-api
+```
+
+## Data
+
+The source data is in `uganda-universities-domains.json`. Each entry includes:
+
+```json
+{
+  "name": "Makerere University",
+  "abbrev": "MAK",
+  "location": "Makerere",
+  "type": "public",
+  "established": 1922,
+  "latitude": 0.33375,
+  "longitude": 32.56752,
+  "domains": ["mak.ac.ug"],
+  "web_pages": ["http://www.mak.ac.ug/"],
+  "alpha_two_code": "UG",
+  "alpha_three_code": "UGA",
+  "country": "Uganda"
+}
+```
+
+### Seed the Database
+
+```bash
+python scripts/seed.py
 ```
 
 ## Contributing
+
 Pull requests are welcome. Do not hesitate to fix any wrong data. But please open an issue first to discuss what you would like to change.
 
 - Check out [CONTRIBUTING.md](CONTRIBUTING.md) for information about getting involved.
 
 ## License
+
 [MIT License](https://github.com/WesleyKambale/Ug-Universities-Api/blob/main/LICENSE)
 
 ## Creation
-Created by [Wesley Kambale](https://kambale.hashnode.dev)
+
+Created by [Wesley Kambale](https://kambale.dev)

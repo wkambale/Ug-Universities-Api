@@ -35,3 +35,7 @@ async def client():
         transport=ASGITransport(app=app), base_url="http://test"
     ) as ac:
         yield ac
+
+@pytest.fixture
+def admin_headers():
+    return {"Authorization": "Bearer test-token"}

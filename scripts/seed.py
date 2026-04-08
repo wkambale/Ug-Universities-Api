@@ -1,3 +1,7 @@
+"""
+Run once after first migration to seed PostgreSQL from JSON source.
+Usage: python scripts/seed.py
+"""
 import asyncio
 import json
 import os
@@ -9,25 +13,29 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from app.database import AsyncSessionLocal
 from app.universities.models import University
 
+
 async def seed():
-    with open("uganda-universities-domains.json", "r") as f:
+    json_path = os.path.join(
+        os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+        "uganda-universities-domains.json",
+    )
+    with open(json_path, "r") as f:
         records = json.load(f)
 
     async with AsyncSessionLocal() as db:
         for entry in records:
-            # The source JSON currently has "uni_name", "main_loc", "lat", "lon" instead of
-            # the fields expected in models.py (name, location, latitude, longitude)
-            # and might lack "type" or "established". We handle mapping and defaults here.
+            # Support both old field names (uni_name, main_loc, lat, lon)
+            # and new enriched field names (name, location, latitude, longitude)
             uni = University(
-                name=entry.get("uni_name") or entry.get("name"),
-                abbrev=entry.get("abbrev", ""),
-                location=entry.get("main_loc") or entry.get("location"),
-                type=entry.get("type", "private"),  # fallback to 'private'
+                name=entry.get("name") or entry.get("uni_name"),
+                abbrev=entry.get("abbrev"),
+                location=entry.get("location") or entry.get("main_loc"),
+                type=entry.get("type", "private"),
                 domains=entry.get("domains", []),
                 web_pages=entry.get("web_pages", []),
-                latitude=float(entry.get("lat")) if entry.get("lat") else entry.get("latitude"),
-                longitude=float(entry.get("lon")) if entry.get("lon") else entry.get("longitude"),
-                established=entry.get("established", None),
+                latitude=entry.get("latitude") or (float(entry["lat"]) if entry.get("lat") else None),
+                longitude=entry.get("longitude") or (float(entry["lon"]) if entry.get("lon") else None),
+                established=entry.get("established"),
                 alpha_two_code=entry.get("alpha_two_code", "UG"),
                 alpha_three_code=entry.get("alpha_three_code", "UGA"),
                 country=entry.get("country", "Uganda"),
@@ -36,6 +44,7 @@ async def seed():
         await db.commit()
 
     print(f"Seeded {len(records)} universities successfully.")
+
 
 if __name__ == "__main__":
     asyncio.run(seed())
